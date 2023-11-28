@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pago de Tarjeta</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Información de la Tarjeta</h2>
+        <form id="formularioTarjeta" onsubmit="return validarTarjeta()">
+            <label for="numeroTarjeta">Número de Tarjeta:</label>
+            <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" required>
+            
+            <label for="vencimiento">Vence (MM/AA):</label>
+            <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" maxlength="5" required>
+            
+            <label for="codigoSeguridad">Código de Seguridad:</label>
+            <input type="text" id="codigoSeguridad" name="codigoSeguridad" placeholder="XXX" maxlength="3" required>
+            
+            <h2>Dirección de la Tarjeta</h2>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label for="direccion">Domicilio:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            
+            <label for="apartamento">Apartamento/Interior:</label>
+            <input type="text" id="apartamento" name="apartamento" required>
+            
+            <button type="submit">PAGAR</button>
+        </form>
+        <div id="mensaje"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
